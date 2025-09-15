@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Her Birthday World</title>
+<style>
+body {
+margin: 0;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background: linear-gradient(to top, #0d0d0d, #1a1a40);
+color: white;
+font-family: 'Georgia', serif;
+text-align: center;
+}
+.girl {
+font-size: 80px;
+margin-bottom: 40px;
+}
+.choices {
+display: flex;
+gap: 50px;
+}
+.choice {
+padding: 20px 40px;
+border: 2px solid white;
+border-radius: 10px;
+cursor: pointer;
+transition: all 0.3s ease;
+text-decoration: none;
+color: white;
+font-size: 20px;
+font-weight: bold;
+background: rgba(255,255,255,0.1);
+}
+.choice:hover {
+background: rgba(255,255,255,0.3);
+transform: scale(1.1);
+box-shadow: 0 0 20px #fff;
+}
+</style>
+</head>
+<body>
+<div class="girl">👩</div>
+<h1>Choose Your Path</h1>
+<div class="choices">
+<a href="past.html" class="choice">⬅️ Past</a>
+<a href="present.html" class="choice">⬆️ Present</a>
+<a href="future.html" class="choice">➡️ Future</a>
+</div>
+</body>
+</html>
