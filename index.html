@@ -54,3 +54,64 @@ box-shadow: 0 0 20px #fff;
 </div>
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Her Birthday Gift</title>
+<style>
+body {
+margin: 0;
+background: url('background.jpg') no-repeat center center fixed;
+background-size: cover;
+overflow: hidden;
+text-align: center;
+}
+#girl {
+position: absolute;
+bottom: 50px;
+left: 50%;
+transform: translateX(-50%);
+width: 100px;
+transition: all 3s linear;
+}
+.choice {
+position: absolute;
+bottom: 20px;
+font-size: 20px;
+cursor: pointer;
+background: rgba(255,255,255,0.7);
+padding: 10px;
+border-radius: 10px;
+}
+#left { left: 20%; }
+#forward { left: 50%; transform: translateX(-50%); }
+#right { right: 20%; }
+</style>
+</head>
+<body>
+<audio id="bg-music" src="music.mp3" loop></audio>
+
+<img id="girl" src="girl.png" alt="Girl">
+
+<div id="left" class="choice">📚 Library</div>
+<div id="forward" class="choice">🎮 Game Store</div>
+<div id="right" class="choice">🚂 Train</div>
+
+<script>
+const girl = document.getElementById("girl");
+const music = document.getElementById("bg-music");
+music.play();
+
+document.getElementById("left").onclick = () => move("past.html", "30%");
+document.getElementById("forward").onclick = () => move("present.html", "50%");
+document.getElementById("right").onclick = () => move("future.html", "70%");
+
+function move(page, position) {
+girl.style.left = position;
+setTimeout(() => {
+window.location.href = page;
+}, 3000); // after animation
+}
+</script>
+</body>
+</html>
